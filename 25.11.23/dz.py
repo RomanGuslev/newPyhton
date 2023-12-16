@@ -1,14 +1,6 @@
-from random import randint
-
-a = randint(1, 100)
-b = int(input("Угадайте целое число от 1 до 100:"))
-while b != a:
-    b = int(input("Повторите попытку:"))
-    if b < a:
-        print("Ваше число меньше, чем задумал компьютер")
-    elif b > a:
-        print("Ваше число больше, чем задумал компьютер")
-    else:
-        print("Вы угадали")
-print(b)
-print(a)
+numbers = [int(input('-> ')) for _ in range(int(input('Введите количество элементов списка: ')))]
+sum_of_numbers = sum(numbers)
+count_of_zero = numbers.count(0)
+count_of_numbers = len(numbers) - count_of_zero
+average = sum_of_numbers / count_of_numbers
+print('Средне арифметическое: ', average)
